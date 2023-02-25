@@ -1,30 +1,29 @@
-import { useEffect, useState } from "react";
-import Service from "services/HomeService";
+import { useEffect, useReducer } from "react";
+import { Actions } from "./Action";
+import { Cat, InitState } from "./InitState";
+import { Reducer } from "./Reducer";
+import LightButton from "components/buttons/LightButton/LightButton"
 
 function App() {
-  const [data, setData] = useState([]);
+  const [state, dispatch] = useReducer(Reducer, InitState);
   useEffect(() => {
-    fetch();
+    Actions.GetData(dispatch);
   }, []);
-
-  const fetch = async () => {
-    let result: any = await Service.GetData();
-    setData(result);
-  };
 
   return (
     <>
       <h1>Default page</h1>
-      {data &&
-        data.map((e: any, ie: any) => {
+      {state.DataItem &&
+        state.DataItem.map((e: Cat, ie: number, arr: Cat[]) => {
           return (
-            <div>
+            <div key={e.id}>
               <h5>{e.name}</h5>
               <p>{e.age}</p>
               <br />
             </div>
           );
         })}
+        <LightButton color="lime" title="bro" onClick={() =>{}}/>
     </>
   );
 }
