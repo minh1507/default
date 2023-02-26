@@ -1,0 +1,96 @@
+@media (hover: hover) {
+  #creditcard {
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  #money {
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .wallet:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .wallet:hover #money {
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wallet:hover .wallet__text span {
+  transform: translateY(-0.25rem);
+  transition: transform .2s ease-in-out;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+.wallet {
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 1rem 90px 1rem 2rem;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.wallet:active {
+  transform: translateY(1px);
+}
+
+.wallet__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 0.2rem;
+  height: 140%;
+}
+
+
+.red {
+  background-color: #dc4c64;
+}
+
+.black {
+  background-color: #332d2d;
+}
+
+.blue {
+  background-color: #3b71ca;
+}
+
+.green {
+  background-color: #14a44d;
+}
+
+.yellow {
+  background-color: #e4a11b;
+}
+
+.lime {
+  background-color: #54b4d3;
+}
+
+.grey {
+  background-color: #9fa6b2;
+}

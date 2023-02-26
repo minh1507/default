@@ -2,10 +2,11 @@ import { useEffect, useReducer } from "react";
 import { Actions } from "./Action";
 import { Cat, InitState } from "./InitState";
 import { Reducer } from "./Reducer";
-import LightButton from "components/buttons/LightButton/LightButton"
+import LightBeachButton from "components/buttons/LightBeachButton/LightBeachButton"
 
 function App() {
   const [state, dispatch] = useReducer(Reducer, InitState);
+
   useEffect(() => {
     Actions.GetData(dispatch);
   }, []);
@@ -23,7 +24,7 @@ function App() {
             </div>
           );
         })}
-        <LightButton color="lime" title="bro" onClick={() =>{}}/>
+        <LightBeachButton onClick={() => {}} title="ok" color="red"/>
     </>
   );
 }

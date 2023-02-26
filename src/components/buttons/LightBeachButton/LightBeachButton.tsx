@@ -1,4 +1,6 @@
-import "./LightButton.scss";
+import "./LightBeachButton.scss";
+import { style } from "glamor";
+import { lightBeach } from "common/constants/constant";
 
 interface Props {
   onClick: Function;
@@ -12,14 +14,17 @@ interface Props {
   pr?: string;
   pb?: string;
   pt?: string;
-  m?: string,
-  mt?: string,
-  ml?: string,
-  mr?: string,
-  mb?: string,
+  m?: string;
+  mt?: string;
+  ml?: string;
+  mr?: string;
+  mb?: string;
 }
 
 function Button(props: Props) {
+  const styles = style({
+    "--clr": lightBeach[props.color as keyof typeof lightBeach],
+  });
 
   const Style = {
     width: `${props.w && props.w}`,
@@ -29,29 +34,23 @@ function Button(props: Props) {
     paddingRight: `${props.pr && props.pr}`,
     paddingBottom: `${props.pb && props.pb}`,
     paddingTop: `${props.pt && props.pt}`,
-    margin:  `${props.m && props.m}`,
+    margin: `${props.m && props.m}`,
     marginTop: `${props.mt && props.mt}`,
     marginBottom: `${props.mb && props.mb}`,
     marginLeft: `${props.ml && props.ml}`,
-    marginRight: `${props.mr && props.mr}`
+    marginRight: `${props.mr && props.mr}`,
   };
 
-  const Class = `light ${props.col && props.col} ${props.color}`
+  const Class = `LightBeachButton ${props.col && props.col}`;
 
   return (
-    <button
-      className={Class}
-      style={Style}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      {props.title}
+    <button {...styles} style={Style} className={Class}>
+      <span>Button</span>
+      <i></i>
     </button>
   );
 }
 
 export default Button;
 
-//blue, red, green, yellow, lime, grey
+// purple,yellow,lowGreen,green,orange,red,blue,pink,lowPurple,lime,lowYellow,highPink,highYellow
