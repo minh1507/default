@@ -1,0 +1,52 @@
+.flex{
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.z-10{
+    z-index: 10;
+}
+
+.left-0{
+    left: 0;
+}
+
+.right-0{
+    right: 0;
+}
+
+.top-0{
+    top: 0;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.backdrop-blur-sm {
+    --tw-backdrop-blur: blur(4px);
+}
+
+.bg-1 {
+    background-color: rgba(51, 65, 85, 0);
+}
+
+.text-2x1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.container-16{
+    padding: 0 16px;
+}

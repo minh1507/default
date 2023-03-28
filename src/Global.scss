@@ -23,11 +23,20 @@
   src: url(assets/Font/Poppins/Poppins-ExtraBold.ttf);
 }
 
+@font-face {
+  font-family: siga;
+  src: url(assets/Font/Signika/OFL.txt);
+}
+
 * {
-  font-family: "Poppins-light", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h5{
+  font-family: siga;
+  font-weight: bold;
 }
 
 ul{

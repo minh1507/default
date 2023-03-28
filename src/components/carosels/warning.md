@@ -1,0 +1,1 @@
+comopent react slick read here https://react-slick.neostack.com/docs/get-started

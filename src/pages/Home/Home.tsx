@@ -1,32 +1,19 @@
-import { useEffect, useReducer } from "react";
-import { Actions } from "./Action";
-import { Cat, InitState } from "./InitState";
-import { Reducer } from "./Reducer";
-import LightBeachButton from "components/buttons/LightBeachButton/LightBeachButton"
+import { connect } from "react-redux";
+import "./Home.scss";
 
-function App() {
-  const [state, dispatch] = useReducer(Reducer, InitState);
-
-  useEffect(() => {
-    Actions.GetData(dispatch);
-  }, []);
+interface Props {}
+const Home = (props: Props) => {
+ 
 
   return (
     <>
-      <h1>Default page</h1>
-      {state.DataItem &&
-        state.DataItem.map((e: Cat, ie: number, arr: Cat[]) => {
-          return (
-            <div key={e.id}>
-              <h5>{e.name}</h5>
-              <p>{e.age}</p>
-              <br />
-            </div>
-          );
-        })}
-        <LightBeachButton onClick={() => {}} title="ok" color="red"/>
+      <section className="container-16">
+      </section>
     </>
   );
-}
+};
 
-export default App;
+const mapState = ({ ...state }) => ({});
+const mapDispatchToProps = {};
+
+export default connect(mapState, mapDispatchToProps)(Home);

@@ -26,6 +26,7 @@
       "pages/*": ["pages/*"],            
       "routes/*": ["routes/*"],      
       "services/*": ["services/*"],
+      "store/*": ["store/*"],
     },
   },
   "include": [
